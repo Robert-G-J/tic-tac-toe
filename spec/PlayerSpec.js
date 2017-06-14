@@ -26,6 +26,9 @@ describe("A Player", function() {
         expect(function() { player.placeMarker(3,4) }).toThrow("Invalid coordinate choice");
         expect(function() { player.placeMarker(3,0) }).toThrow("Invalid coordinate choice");
       });
+      it("can only enter an integer", function() {
+        expect(function() { player.placeMarker('foo', 'bar') }).toThrow("Invalid coordinate choice");
+      });
     });
   });
 
