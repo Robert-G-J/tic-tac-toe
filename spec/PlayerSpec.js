@@ -16,6 +16,7 @@ describe("A Player", function() {
       var coord = [1,1]
       expect(player.placeMarker(1,1)).toEqual(coord);
     });
+  });
 
     describe("when picking coords, ", function() {
       it("can't pick an x-coord 1 > x > 3", function() {
@@ -30,6 +31,4 @@ describe("A Player", function() {
         expect(function() { player.placeMarker('foo', 'bar') }).toThrow("Invalid coordinate choice");
       });
     });
-  });
-
 });
