@@ -12,6 +12,10 @@ describe("Player", function() {
       expect(player.getMarker()).toEqual(marker);
     });
 
+    it("pick a coordinate", function() {
+      var coord = [0,0]
+      expect(player.placeMarker(0,0)).toEqual(coord);
+    });
   });
 
 });
