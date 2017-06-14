@@ -1,9 +1,17 @@
 describe("Player", function() {
   var player;
+  var marker;
 
   beforeEach(function() {
-    player = new Player();
+    marker = 'x';
+    player = new Player(marker);
   });
 
+  describe("can", function() {
+    it("have a marker", function() {
+      expect(player.getMarker()).toEqual(marker);
+    });
+
+  });
 
 });

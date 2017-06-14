@@ -18,6 +18,7 @@ describe("Game", function() {
   });
   it("should have a board", function() {
     var board = new Board();
+    console.log(game.getBoard())
     expect(game.getBoard()).toEqual(board.viewBoard());
   });
 });
