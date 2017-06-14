@@ -1,4 +1,4 @@
-describe("Player", function() {
+describe("A Player", function() {
   var player;
   var marker;
 
@@ -13,8 +13,14 @@ describe("Player", function() {
     });
 
     it("pick a coordinate", function() {
-      var coord = [0,0]
-      expect(player.placeMarker(0,0)).toEqual(coord);
+      var coord = [1,1]
+      expect(player.placeMarker(1,1)).toEqual(coord);
+    });
+
+    describe("when picking coords, ", function() {
+      it("can't pick an x-coord greater than 3", function() {
+        expect(function() { player.placeMarker(4,1) }).toThrow("Invalid coordinate choice");
+      });
     });
   });
 
